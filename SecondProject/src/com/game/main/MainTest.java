@@ -1,21 +1,17 @@
 package com.game.main;
 
+import java.util.ArrayList;
+
 public class MainTest {
-	
-	public static final int WIDTH = 500, HEIGHT = WIDTH;
 	
 	public static final int GS = 9;
 	
-	public MainTest() {
-		
-		new GameInput(WIDTH,HEIGHT,"Sudoku Game", GS);		
-		
-	}
-	
 	public static void main (String[] args) {
+	
+		ArrayList<ArrayList<Integer>> list=new ArrayList<ArrayList<Integer>>(GS);
 		
-		new MainTest();
+		BruteForce bf = new BruteForce(list,GS);
+		
+		bf.searchAlgorithm();
 	}
-	
-	
 }
